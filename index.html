@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5e70fe0a69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="PLOGO.jpg" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#codingprofile">Coding profiles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="header-text">
+            <p>COMPETITIVE PROGRAMMER</p>
+            <h1>Hi, I'm <span>Pulkit</span></h1>
+        </div>
+    </div>
+</div>
+<div>
+
+    <!-- ABOUT SECTION STARTS HERE -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic22.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">ABOUT ME</h1>
+       <p>Hello! My name is Pulkit, and I am currently a third-year student in the Computer Science and Engineering branch at NIT Silchar. I have a profound passion for competitive programming and have successfully solved over 500 coding problems, which has significantly enhanced my problem-solving abilities and deepened my understanding of algorithms and data structures. Additionally, I possess strong skills in public speaking and teamwork, having developed these through various group projects and presentations. These experiences have taught me the value of effective collaboration and clear, confident communication. Beyond academics, I am also an avid cricket enthusiast and have had the privilege of representing my college in numerous tournaments. Balancing my time between studies, competitive programming, and cricket has been challenging yet immensely rewarding. I am committed to continuous learning and improvement, and I aim to apply my skills and knowledge in meaningful ways within the tech industry. Thank you for taking the time to learn more about me.</p>                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('soft skills')">Soft Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>HTML/CSS</li>
+                            <li>DATA STRUCTURE</li>
+                            <li>ALGORITHMS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.TECH</span><br>COMPUTER SCIENCE ENGINEERING,NIT SILCHAR(2022-2026)</li>
+                            <li><span>CLASS XII (94.4%)</span><br>DAV PUBLIC SCHOOL,PATNA(2022)</li>
+                            <li><span>CLASS X (94.4%)</span><br>DAV PUBLIC SCHOOL,PATNA(2020)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="soft skills">
+                        <ul>
+                            <li>PUBLIC SPEAKING</li>
+                            <li>TEAM WORK</li>
+                            <li>CRITICAL THINKING</li>
+                            <li>PROBLEM SOLVING</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- MY CODING PROFILES STARTS HERE -->
+<div id="codingprofile">
+    <div class="container">
+        <h1 class="sub-title">MY CODING PROFILES</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="cflogo.png">
+                <div class="layer">
+                    <h3>CODEFORCES PROFILE</h3>
+                    <a href="https://codeforces.com/profile/overjoyed22"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="cclogo2.jpg">
+                <div class="layer">
+                    <h3>CODECHEF PROFILE</h3>
+                    <a href="https://www.codechef.com/users/overjoyed22"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="lclogo.png">
+                <div class="layer">
+                    <h3>LEETCODE PROFILE</h3>
+                    <a href="https://leetcode.com/u/pulkitp_ug_22/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT SECTION STARTS HERE -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">CONTACT ME</h1>
+                <p><i class="fa-solid fa-envelope"></i>pulkitnits2022@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91-8541017890</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/pulkit-11693a257/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087658823870"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/overjoyed22"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="pythresum.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="'submit-to-google-sheet'">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+           tabcontent .classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1p8hoVsbwljOKBnoxW3aG_uSUeHgKiHW3aX5FwfsODBl1hhztIoe4LOTfoBlmU6nKwg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
